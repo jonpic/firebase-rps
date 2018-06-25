@@ -15,7 +15,7 @@ var p2Choice
 var p1Score = 0
 var p2Score = 0
 var smack = ""
-// check to see if at least two people are on the site.
+
 var connectionsRef = db.ref("/connections");
 
 var connectedRef = db.ref(".info/connected");
@@ -24,10 +24,10 @@ var connectedRef = db.ref(".info/connected");
 var addConnections = function() {
 connectedRef.on("value", function(snap) {
 
-  // If they are connected..
+  
   if (snap.val()) {
 
-    // Add user to the connections list.
+    
     var con = connectionsRef.push(true);
 
     // Remove user from the connection list when they disconnect.
@@ -102,15 +102,6 @@ var updater = function () {
           updater();
           
         }
-      // Set the local variables for highBidder equal to the stored values in firebase.
-      // highBidder = snapshot.val().highBidder;
-      // highPrice = parseInt(snapshot.val().highPrice);
-  
-      // change the HTML to reflect the newly updated local values (most recent information from firebase)
-      // $("#highest-bidder").text(snapshot.val().highBidder);
-      // $("#highest-price").text("$" + snapshot.val().highPrice);
-  
-      // Print the local data to the console.
     }
 })
 $("#reset-score-button").on("click", function(){

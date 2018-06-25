@@ -3,3 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 } */
+
+#bg-holder {
+    background: url("../images/rpsbg.png")
+}
