@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
 
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
@@ -33,19 +33,19 @@
       <div class="container" id="play-area">
           <div class="row d-flex justify-content-between">
               <div class="col-md-5 text-center" id="player-1-rock">
-                <button class="btn btn-default">
+                <button class="btn btn-default p1-btn" value="1-rock">
                   <img class="img-fluid" src="assets/images/rock.png">
                 </button>
               </div>
               <div class="col-md-5 text-center" id="player-2-rock">
-                <button class="btn btn-default">
+                <button class="btn btn-default p2-btn" value="2-rock">
                   <img class="img-fluid" src="assets/images/rock.png">
                 </button>
               </div>
           </div>
           <div class="row d-flex justify-content-between">
             <div class="col-md-5 text-center" id="player-1-paper">
-              <button class="btn btn-default">
+              <button class="btn btn-default p1-btn" value="1-paper">
                 <img class="img-fluid" src="assets/images/paper.jpg">
               </button>
             </div>
@@ -53,19 +53,19 @@
               <p>VS</p>
             </div>
             <div class="col-md-5 text-center" id="player-2-paper">
-              <button class="btn btn-default">
+              <button class="btn btn-default p2-btn" value="2-paper">
                 <img class="img-fluid" src="assets/images/paper.jpg">
               </button>
           </div>
         </div>
           <div class="row d-flex justify-content-between">
             <div class="col-md-5 text-center" id="player-1-scissors">
-              <button class="btn btn-default">
+              <button class="btn btn-default p1-btn" value="1-scissors">
                 <img class="img-fluid" src="assets/images/scissors.jpg">
               </button>
             </div>
             <div class="col-md-5 text-center" id="player-2-scissors">
-              <button class="btn btn-default">
+              <button class="btn btn-default p2-btn" value="2-scissors">
                 <img class="img-fluid" src="assets/images/scissors.jpg">
               </button>
             </div>
@@ -77,21 +77,21 @@
             <h1 class="display-4">Player 1 Connected</h1>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-default btn-primary">Reset Score</button>
+            <button class="btn btn-default btn-primary" id="reset-score-button">Reset Score</button>
           </div>
           <div class="col-md-5 text-center" id="player-2-connected">
             <h1 class="display-4">Player 2 Connected</h1>
           </div>
         </div>
         <div class="row d-flex justify-content-between">
-          <div class="col-md-5 text-center" id="player-1-score">
-            <h1 class="display-4">Player 1: 0</h1>
+          <div class="col-md-5 text-center">
+            <h1 class="display-4" id="player-1-score"></h1>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-default btn-primary">Play Again</button>
+            <button class="btn btn-default btn-primary" id="shoot">Shoot</button>
           </div>
-          <div class="col-md-5 text-center" id="player-2-score">
-            <h1 class="display-4">Player 2: 0</h1>
+          <div class="col-md-5 text-center" >
+            <h1 class="display-4" id="player-2-score"></h1>
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
           <div class="form-group row">
               <input class="form-control" id="chat-input" placeholder="Talk some smack!" type="text">
             </div>
-            <button class="btn btn-primary" id="calculate-btn">Send Smack</button>
+            <button class="btn btn-primary" id="smack-btn">Send Smack</button>
           </form>
       </div>
     </div>
