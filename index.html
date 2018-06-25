@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Band Together</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4 text-center">Epic Rock Paper Scissors Show Down!</h1>
+      <hr class="my-4">
+      <h3 class="display-6 text-center">Settle any argument, anywhere, anytime</h3>
+    </div>
+
+    <div class="container-fluid" id="bg-holder">
+      <div class="container" id="play-area">
+          <div class="row d-flex justify-content-between">
+              <div class="col-md-5 text-center" id="player-1-rock">
+                <button class="btn btn-default">
+                  <img class="img-fluid" src="assets/images/rock.png">
+                </button>
+              </div>
+              <div class="col-md-5 text-center" id="player-2-rock">
+                <button class="btn btn-default">
+                  <img class="img-fluid" src="assets/images/rock.png">
+                </button>
+              </div>
+          </div>
+          <div class="row d-flex justify-content-between">
+            <div class="col-md-5 text-center" id="player-1-paper">
+              <button class="btn btn-default">
+                <img class="img-fluid" src="assets/images/paper.jpg">
+              </button>
+            </div>
+            <div class="col-md-2">
+              <p>VS</p>
+            </div>
+            <div class="col-md-5 text-center" id="player-2-paper">
+              <button class="btn btn-default">
+                <img class="img-fluid" src="assets/images/paper.jpg">
+              </button>
+          </div>
+        </div>
+          <div class="row d-flex justify-content-between">
+            <div class="col-md-5 text-center" id="player-1-scissors">
+              <button class="btn btn-default">
+                <img class="img-fluid" src="assets/images/scissors.jpg">
+              </button>
+            </div>
+            <div class="col-md-5 text-center" id="player-2-scissors">
+              <button class="btn btn-default">
+                <img class="img-fluid" src="assets/images/scissors.jpg">
+              </button>
+            </div>
+        </div>
+      </div>
+      <div class="container" id="alert-container">
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-5 text-center" id="player-1-connected">
+            <h1 class="display-4">Player 1 Connected</h1>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-default btn-primary">Reset Score</button>
+          </div>
+          <div class="col-md-5 text-center" id="player-2-connected">
+            <h1 class="display-4">Player 2 Connected</h1>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-5 text-center" id="player-1-score">
+            <h1 class="display-4">Player 1: 0</h1>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-default btn-primary">Play Again</button>
+          </div>
+          <div class="col-md-5 text-center" id="player-2-score">
+            <h1 class="display-4">Player 2: 0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="chat-container">
+        <div id="chat-box">
+          <p id="chat-p">You know you want to talk some smack!</p>
+        </div>  
+        <form>
+          <div class="form-group row">
+              <input class="form-control" id="chat-input" placeholder="Talk some smack!" type="text">
+            </div>
+            <button class="btn btn-primary" id="calculate-btn">Send Smack</button>
+          </form>
+      </div>
+    </div>
+  </div>
+            
+            
+
+
+  
+<!-- JavaScript -->
+<script src="code/code.js"></script>
+
+</body>
+
+</html>
