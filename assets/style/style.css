@@ -4,6 +4,6 @@
     background-size: cover;
 } */
 
-#bg-holder {
+body {
     background: url("../images/rpsbg.png")
 }
